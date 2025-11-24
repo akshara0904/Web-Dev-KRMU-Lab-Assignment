@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body{
+            background: #f5f5f5;
+            color: #333;
+        }
+
+        header{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.5rem 2rem;
+            background: #fff;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        header nav a{
+            margin: 0 1rem;
+            text-decoration: none;
+            color: #333;
+            transition: 0.3s;
+        }
+
+        header nav a:hover{
+            color: #007bff;
+        } 
+        
+        .hero{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 3rem 2rem;
+        }
+
+        .hero-text{
+            max-width: 50%;
+        }
+
+        .hero-text h1{
+            font-size: 2.5rem;
+        }
+
+        .animated-role{
+            font-size: 1.5rem;
+            font-weight: 600;
+            animation: colorChange 3s infinite;
+        }
+
+        @keyframes colorChange{
+            0% {color:#007bff;}
+            50% {color:#ff0066;}
+            100% {color:#007bff;}
+        }
+
+        .btn{
+            display: inline-block;
+            padding: 0.8rem 1.3rem;
+            margin-top: 1rem;
+            background: #007bff;
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            transition: 0.3s;
+        }
+
+        .btn:hover{
+            transform: scale(1.05);
+        }
+
+        .hero img{
+            width: 250px;
+            border-radius: 10px;
+        }
+
+        section{
+            padding: 2.5rem 2rem;
+        }
+
+        h2{
+            margin-bottom: 1rem;
+        }
+
+        .skills-grid,
+        .project-grid{
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .card{
+            background: white;
+            padding: 1.3rem;
+            text-align: center;
+            border-radius: 10px;
+            transition: 0.3s;
+        }
+
+        .card:hover{
+            transform: translateY(-5px);
+        }
+
+        /* CONTACT FORM */
+        .contact-form input,
+        .contact-form textarea{
+            width: 100%;
+            padding: 0.8rem;
+            border-radius: 6px;
+            border: 1px solid #ccc;
+            margin-bottom: 1rem;
+        }
+
+      
+        footer{
+            text-align: center;
+            padding: 1rem;
+            background: #111;
+            color: white;
+        }
+
+       
+        @media (max-width: 768px){
+            .hero{
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .hero-text{
+                max-width: 100%;
+            }
+
+            .hero img{
+                margin-top: 1.5rem;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+
+
+<header>
+    <h2 class="logo">My Portfolio</h2>
+    <nav>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+    </nav>
+</header>
+
+
+<section class="hero">
+    <div class="hero-text">
+        <h1>Hello, I'm <span style="color:#007bff;">Akshara</span></h1>
+        <h2 class="animated-role">AI & ML Student</h2>
+        <p>I am a first-year BTech CSE (AI & ML) student learning web development.</p>
+        <a href="#contact" class="btn">Contact Me</a>
+    </div>
+
+    <img src="https://img.sanishtech.com/u/08c54f6e333384a208445bbc2c4a21bf.jpg" alt="Profile Photo">
+</section>
+
+<section id="about">
+    <h2>About Me</h2>
+    <p>I am a beginner developer learning HTML, CSS, Flexbox, Grid, and responsive design.</p>
+</section>
+
+<section id="skills">
+    <h2>Skills</h2>
+    <div class="skills-grid">
+        <div class="card">HTML</div>
+        <div class="card">CSS</div>
+        <div class="card">Python</div>
+        <div class="card">C Programming</div>
+        <div class="card">Git & GitHub</div>
+        <div class="card">Machine Learning Basics</div>
+    </div>
+</section>
+
+<section id="projects">
+    <h2>Projects</h2>
+
+    <div class="project-grid">
+        <div class="card">
+            <h3>Portfolio Website</h3>
+            <p>Responsive website using Flexbox & Grid.</p>
+        </div>
+
+        <div class="card">
+            <h3>Calculator</h3>
+            <p>Basic calculator using HTML/CSS/JS.</p>
+        </div>
+
+        <div class="card">
+            <h3>Python Mini Programs</h3>
+            <p>Simple ML beginner-level scripts.</p>
+        </div>
+    </div>
+</section>
+
+<section id="contact">
+    <h2>Contact Me</h2>
+
+    <form class="contact-form">
+        <input type="text" placeholder="Your Name" required>
+        <input type="email" placeholder="Your Email" required>
+        <textarea placeholder="Message" rows="4" required></textarea>
+        <button class="btn">Send</button>
+    </form>
+</section>
+
+<footer>
+    <p>© 2025 Akshara | All Rights Reserved</p>
+</footer>
+
+</body>
+</html>
